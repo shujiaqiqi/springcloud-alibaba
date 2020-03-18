@@ -1,0 +1,5 @@
+F:\code\sourcecode\springbootintegration\springcloud-alibaba\cloud-consumer-feign-hystrix-order80\src\main\java\com\ch\controller\PaymentController.java
+F:\code\sourcecode\springbootintegration\springcloud-alibaba\cloud-consumer-feign-hystrix-order80\src\main\java\com\ch\service\PaymentFeignHystrixService.java
+F:\code\sourcecode\springbootintegration\springcloud-alibaba\cloud-consumer-feign-hystrix-order80\src\main\java\com\ch\service\impl\PaymentFeignHystrixFallBack.java
+F:\code\sourcecode\springbootintegration\springcloud-alibaba\cloud-consumer-feign-hystrix-order80\src\main\java\com\ch\config\FeignConfig.java
+F:\code\sourcecode\springbootintegration\springcloud-alibaba\cloud-consumer-feign-hystrix-order80\src\main\java\com\ch\ConsumerFeignHystrixOrderMain80.java

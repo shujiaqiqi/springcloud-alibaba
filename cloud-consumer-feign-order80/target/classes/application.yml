@@ -1,0 +1,28 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-consumer-service
+
+eureka:
+  client:
+    # 表示是自己注册进eureka server
+    register-with-eureka: true
+    # 是否从eureka server抓取已有的注册信息
+    fetch-registry: true
+    service-url:
+      # 集群
+      defaultZone: http://eureka1:7001/eureka,http://eureka2:7002/eureka
+      # 单机
+#      defaultZone: http://eureka1:7001/eureka
+# 设置feign客户端超时时间（OpenFeign默认支持ribbon）
+ribbon:
+  # 指的是建立连接所用的时间，适用于网络状况正常的情况下，两端连接所用的时间
+  ReadTimeout: 5000
+  # 指的是建立连接后从服务器读取到可用资源所用的时间
+  ConnectTimeOut: 5000
+logging:
+  level:
+    # feign日志以什么级别监控哪个接口
+    com.ch.service.PaymentFeignService: debug

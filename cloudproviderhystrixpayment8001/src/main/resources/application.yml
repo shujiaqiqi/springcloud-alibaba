@@ -1,0 +1,23 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: cloud-payment-hystrix-service
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1 # 采集率
+
+eureka:
+  client:
+    # 表示将自己注册进eureka server
+    register-with-eureka: true
+    # 表示从eureka server抓取已有的注册信息
+    fetch-registry: true
+    service-url:
+      # 集群
+#      defaultZone: http://eureka1:7001/eureka,http://eureka2:7002/eureka
+      # 单机
+      defaultZone: http://eureka1:7001/eureka
