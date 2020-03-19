@@ -17,7 +17,7 @@
         <module>cloudproviderpayment8006</module>
         <module>cloud-consumerconsul-order80</module>
         <module>cloudproviderhystrixpayment8001</module>
-        <module>cloud-consumer-feign-htstrix-order80</module>
+
         <module>cloud-consumer-hystrix-dashboard9001</module>
         <module>cloud-gateway-geteway9527</module>
         <module>cloud-config-center-3344</module>
@@ -30,6 +30,7 @@
         <module>cloudalibaba-provider-payment9002</module>
         <module>cloudalibaba-consumer-nacos-order83</module>
         <module>cloudalibaba-config-nacos-client3377</module>
+        <module>cloudalibaba-sentinel-service8401</module>
     </modules>
 
     <groupId>org.example</groupId>
@@ -109,8 +110,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <fork>true</fork>
-                    <addResources>true</addResources>
+                    <includeSystemScope>true</includeSystemScope>
                 </configuration>
             </plugin>
         </plugins>
