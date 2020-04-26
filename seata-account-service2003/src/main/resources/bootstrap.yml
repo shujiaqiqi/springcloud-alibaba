@@ -1,0 +1,31 @@
+server:
+  port: 2003
+
+
+spring:
+  application:
+    name: seata-account-service
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: fsp_tx_group
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+#        server-addr: 115.29.149.22:80  # Naco服务注册中心地址
+        namespace: 4aba5bd6-3196-45b1-8c4a-9083ac9cefe2
+      config:
+        server-addr: localhost:8848
+#        server-addr: 115.29.149.22:80  # Naco配置中心地址
+        file-extension: yml             # 指定yml格式的配置
+        namespace: 4aba5bd6-3196-45b1-8c4a-9083ac9cefe2
+  profiles:
+    active: dev
+#        group: TEST_GROUP
+#        namespace: cef6a05e-fe9a-4373-8159-5f5dbe97f041
+
+
+# ${spring.application.name}-${spring.profiles.active}.${file.extension}
+# seata-account-service-dev.yml
+
+# 在创建文件时类型还是选yaml

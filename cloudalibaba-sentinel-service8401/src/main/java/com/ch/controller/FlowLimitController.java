@@ -4,7 +4,6 @@ import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -14,7 +13,7 @@ public class FlowLimitController {
     @GetMapping("testA")
     @SentinelResource(value = "testA", blockHandler = "deal_testA", fallback = "error")
     public String testA() throws InterruptedException {
-        int a = 10/0;
+//        int a = 10/0;
         log.info(Thread.currentThread().getName());
         return "------------testA";
     }
@@ -22,7 +21,7 @@ public class FlowLimitController {
     @GetMapping("testB")
     public String testB() throws InterruptedException {
 
-        int a = 1/0;
+//        int a = 1/0;
         log.info(Thread.currentThread().getName());
 //        Thread.sleep(2000);
         return "------------testB";

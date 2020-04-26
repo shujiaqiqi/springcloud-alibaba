@@ -24,3 +24,11 @@ management:
     web:
       exposure:
         include: '*'
+
+server_url:
+  name: http://nacos-payment-provider
+
+# 激活Sentinel对Feign的支持
+feign:
+  sentinel:
+    enabled: true
