@@ -5,12 +5,7 @@
 
     <update id="decrease">
 
-        update t_storage set total = #{newTotal}, residue = #{newTotal}, used = #{newUsed} where id = #{id}
+        update t_storage residue = residue - #{newTotal}, used = used + #{newUsed} where id = #{id}
     </update>
 
-
-    <select id="selectProductById" resultType="com.ch.entity.Storage">
-
-        select * from t_storage where id = #{id}
-    </select>
 </mapper>
